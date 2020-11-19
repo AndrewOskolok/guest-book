@@ -1,0 +1,10 @@
+.main {
+  min-height: calc(100vh - 208px);
+  background-color: #4a56e2;
+}
+
+.main__container {
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 280px;
+}
