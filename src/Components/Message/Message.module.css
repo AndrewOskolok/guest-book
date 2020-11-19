@@ -1,5 +1,7 @@
 .message {
+  position: relative;
   padding: 10px;
+  min-height: calc(100vh - 460px);
   border-radius: 10px;
   background-color: #fff;
 }
@@ -13,11 +15,17 @@
   text-align: center;
 }
 
-/* .message__list {
-} */
+.message__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .message__list_item {
   padding: 5px;
+  width: 100%;
+  min-width: 260px;
+  max-width: 480px;
   border: 1px solid #24cca7;
   border-radius: 10px;
   transition: border 0.25s linear;
@@ -94,9 +102,57 @@
 }
 
 .message__error_message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #4a56e2;
   font-family: Open-sans, sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .message {
+    padding: 20px;
+    min-height: calc(100vh - 549px);
+  }
+
+  .message__title {
+    margin: 0 0 20px;
+    font-size: 20px;
+  }
+
+  .message__list_item:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
+
+  .message__list_item_title {
+    font-size: 18px;
+  }
+
+  .message__list_item_delete {
+    height: 18px;
+  }
+
+  .message__list_item_delete_btn {
+    font-size: 18px;
+  }
+
+  .message__list_item_text {
+    font-size: 16px;
+  }
+
+  .message__list_item_id {
+    font-size: 14px;
+  }
+
+  .message__list_item_data {
+    font-size: 14px;
+  }
+
+  .message__error_message {
+    font-size: 16px;
+  }
 }
