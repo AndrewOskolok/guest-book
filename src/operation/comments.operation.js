@@ -24,7 +24,7 @@ export const addComments = async (name, message) => {
 
     return res.data;
   } catch (error) {
-    return null;
+    console.log(error);
   }
 };
 
@@ -36,6 +36,6 @@ export const delComments = async (id) => {
       return Number(id);
     }
   } catch (error) {
-    return null;
+    console.log(error);
   }
 };

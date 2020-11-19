@@ -55,7 +55,7 @@ const Form = ({ setComments }) => {
         autoComplete="off"
         placeholder="Your message"
         minLength="10"
-        maxLength="180"
+        maxLength="200"
       />
 
       <button className={css.form__input_submit} type="submit">

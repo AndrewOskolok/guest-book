@@ -40,6 +40,10 @@
   color: #aaa;
 }
 
+.form__input_name:invalid:not(:placeholder-shown) {
+  border: 1px solid #ff552b;
+}
+
 .form__input_name:valid:not(:placeholder-shown) {
   border: 1px solid #24cca7;
 }
@@ -70,6 +74,10 @@
 
 .form__input_message:not(:valid):not(:placeholder-shown) {
   color: #aaa;
+}
+
+.form__input_message:invalid:not(:placeholder-shown) {
+  border: 1px solid #ff552b;
 }
 
 .form__input_message:valid:not(:placeholder-shown) {
