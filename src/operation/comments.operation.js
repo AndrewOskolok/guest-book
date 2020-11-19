@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = "https://guest-book-test-assigment.herokuapp.com";
 
 export const getComments = async () => {
   try {
@@ -8,13 +8,13 @@ export const getComments = async () => {
 
     return res.data;
   } catch (error) {
-    if (error.response.status === 404) {
+    if (error.response && error.response.status === 404) {
       return "No comments have been added yet";
     }
-    if (error.response.status === 500) {
+    if (error.response && error.response.status === 500) {
       return "Internal server error";
     }
-    return "Some error";
+    return "Network error";
   }
 };
 
