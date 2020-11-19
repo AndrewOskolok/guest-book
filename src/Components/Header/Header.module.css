@@ -3,17 +3,30 @@
 }
 
 .header__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
   padding: 20px 0;
   min-width: 280px;
   max-width: 728px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #eee;
+  transition: box-shadow 0.25s linear;
+}
+
+.header__container:hover {
+  box-shadow: 0px 0px 10px 0 rgba(255, 255, 255, 0.5);
+}
+
+.header__logo_link {
+  display: inline-block;
 }
 
 .header__title {
   margin: 0 auto 20px;
   color: #24cca7;
+  width: 220px;
   font-family: Open-sans, sans-serif;
   font-size: 32px;
   font-weight: 600;
@@ -48,6 +61,7 @@
 
   .header__title {
     margin: 0 auto 30px;
+    width: 300px;
     font-size: 42px;
   }
 
