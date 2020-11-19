@@ -21,10 +21,12 @@ const Form = ({ setComments }) => {
     const { name, message } = form;
 
     if (name.length >= 2 && message.length >= 10) {
-      addComments(name, message).then((res) =>
-        setComments((state) =>
-          typeof state !== "string" ? [res, ...state] : [res]
-        )
+      addComments(name, message).then(
+        (res) =>
+          res &&
+          setComments((state) =>
+            typeof state !== "string" ? [res, ...state] : [res]
+          )
       );
 
       setForm(initialState);

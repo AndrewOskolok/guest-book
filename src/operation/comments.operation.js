@@ -21,11 +21,8 @@ export const getComments = async () => {
 export const addComments = async (name, message) => {
   try {
     const res = await axios.post("/comments/add", { name, message });
-    console.log(res.data);
 
-    if (res.status === 200) {
-      return res.data;
-    }
+    return res.data;
   } catch (error) {
     console.log(error);
   }
